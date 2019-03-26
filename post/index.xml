@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Academic</title>
+    <title>Posts on SamGG</title>
     <link>/post/</link>
-    <description>Recent content in Posts on Academic</description>
+    <description>Recent content in Posts on SamGG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
@@ -34,14 +34,12 @@ Follow our easy step by step guide to learn how to build your own free website w
     </item>
     
     <item>
-      <title>Hello R Markdown</title>
+      <title>Intro to False Discovery Rate</title>
       <link>/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <description>IntroductionEn biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.</description>
     </item>
     
   </channel>

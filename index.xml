@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic on Academic</title>
+    <title>SamGG on SamGG</title>
     <link>/</link>
-    <description>Recent content in Academic on Academic</description>
+    <description>Recent content in SamGG on SamGG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
@@ -548,7 +548,7 @@ git submodule update --init --recursive
     </item>
     
     <item>
-      <title>Hello R Markdown</title>
+      <title>Intro to False Discovery Rate</title>
       <link>/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
@@ -556,44 +556,87 @@ git submodule update --init --recursive
       <description>
 
 
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;En biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus. Une façon d’aborder la question est de répéter sur chaque marqueur un test statistique classique (test de Student, ANOVA…). Ces tests statistiques s’interprétent dans le cadre d’un seuil de p-value de 5%. Ce seuil correspond au risque de se tromper. Lorsque le test est appliqué une fois, le risque est de 5%, soit 1/20. Lorsque le test est répété de multiples fois, le risque est multiplié par le nombre de répétitions. Ainsi, au seuil de 5%, 5% x 1000 marqueurs = 50 tests ou marqueurs seront déclarés statistiquement significatifs par l’effet seul du hasard, ie seulement parce que le risque a été provoqué 1000 au lieu d’une seule fois. Au seuil de 1%, 1% x 1000 marqueurs = 10 tests seront déclarés statistiquement significatifs par l’effet du hasard. Ces marqueurs déclarés statistiquement significatifs par l’effet seul du hasard sont donc des fausses découvertes pour l’expérimentateur. Avec une matrice de mesures de grande taille, l’expérimentateur est confronté au problème des tests multiples. La p-value utilisée classiquement n’est plus un critère pour déclarer intéressant un marqueur. Nous allons simuler un jeu de données pour comprendre ce phénomène, et nous allons voir une méthode graphique pour contrôler le nombres de fausses découvertes.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
+&lt;div id=&#34;jeu-de-donnees-sans-differences&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Jeu de données sans différences&lt;/h1&gt;
+&lt;p&gt;Nous allons étudier un jeu de données simulées. Ce jeu simule 2 groupes de 10 individus et 1000 marqueurs, donc une matrice de 1000 lignes x 20 colonnes. Commençons par définir des données qui ne contiennent pas de réelles différences.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Synchronisation du generateur de nombre aleatoire
+set.seed(1)
+
+# Jeu aléatoire de donnees suivant une loi gaussienne
+mat=matrix(rnorm(20000),1000,20)
+mat2=mat  # archivage&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nous pouvons représenter le jeu de données via une heatmap, une carte de chaleur. L’idée est de transformer les valeurs numériques de la matrice par une couleur afin d’obtenir une image. L’oeil et le cerveau sont plus sensibles et réactifs à une image qu’à une matrice de nombres.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# heatmap, echelle de couleurs par défaut
+image(t(mat)[,rev(seq(nrow(mat)))], axes = F)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# echelle de couleurs en double degrade negatif et positif
+image(t(mat)[,rev(seq(nrow(mat)))], axes = F, col = colorRampPalette(c(&amp;quot;Blue2&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;Red2&amp;quot;))(32))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Nous allons définir notre score pour déclarer un marqueur intéressant. Le test de Student et sa p-value est un choix classique. Nous voulons effectuer le test sur toutes les lignes de la matrice grâce à une boucle. Pour réaliser le coeur de la boucle, travaillons sur la première ligne pour définir le code R.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Calcul du test de Student sur la 1ere ligne
+res = t.test(mat[1,1:10],mat[1,11:20])
+res  # affiche le contenu de la variable resultant du test de Student
+## 
+##  Welch Two Sample t-test
+## 
+## data:  mat[1, 1:10] and mat[1, 11:20]
+## t = -0.74448, df = 17.52, p-value = 0.4665
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -1.2818449  0.6120472
+## sample estimates:
+##  mean of x  mean of y 
+## -0.5187188 -0.1838200&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;La structure du résultat permet d’identifier la partie qui nous intéresse.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(res)  # structure du résultat
+## List of 9
+##  $ statistic  : Named num -0.744
+##   ..- attr(*, &amp;quot;names&amp;quot;)= chr &amp;quot;t&amp;quot;
+##  $ parameter  : Named num 17.5
+##   ..- attr(*, &amp;quot;names&amp;quot;)= chr &amp;quot;df&amp;quot;
+##  $ p.value    : num 0.466
+##  $ conf.int   : num [1:2] -1.282 0.612
+##   ..- attr(*, &amp;quot;conf.level&amp;quot;)= num 0.95
+##  $ estimate   : Named num [1:2] -0.519 -0.184
+##   ..- attr(*, &amp;quot;names&amp;quot;)= chr [1:2] &amp;quot;mean of x&amp;quot; &amp;quot;mean of y&amp;quot;
+##  $ null.value : Named num 0
+##   ..- attr(*, &amp;quot;names&amp;quot;)= chr &amp;quot;difference in means&amp;quot;
+##  $ alternative: chr &amp;quot;two.sided&amp;quot;
+##  $ method     : chr &amp;quot;Welch Two Sample t-test&amp;quot;
+##  $ data.name  : chr &amp;quot;mat[1, 1:10] and mat[1, 11:20]&amp;quot;
+##  - attr(*, &amp;quot;class&amp;quot;)= chr &amp;quot;htest&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On extrait la partie du résultat en utilisant le symbole &lt;code&gt;$&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;res$p.value  # extraction de la p-value
+## [1] 0.4664565&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Maintenant que le code est défini, nous l’insérons dans une boucle. Il existe plusieurs possibilités pour enregistrer le score (ie la p-value) dans un vecteur qui nous permettra ensuite de retenir les marqueurs les plus pertinents. Pour la boucle nous choisissons de pré-définir le vecteur de résultat.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Boucle pour extraire toutes les p-values
+
+# Version avec accumulation
+# vec=NULL
+# for(i in 1:nrow(mat)) {
+  # res2=t.test(mat[i,1:10],mat[i,11:20])
+  # print(res2$p.value)
+  # vec=c(vec,res2$p.value)
+# }
+# vec
+
+# Version avec pre-initilisation
+vec = rep(NA, 1000)
+# vec = matrix()  # version je-me-pose-pas-de-question
+for(i in 1:nrow(mat)) {
+  res2 = t.test(mat[i,1:10], mat[i,11:20])
+  #print(res2$p.value)
+  vec[i] = res2$p.value
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On vérifie la variabilité du résultat.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(vec)
+## [1] 0.46645650 0.83996475 0.46990800 0.02188267 0.71253108 0.46391811
+tail(vec)
+## [1] 0.33568922 0.34935958 0.03896348 0.88552095 0.86810947 0.84155214&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>
