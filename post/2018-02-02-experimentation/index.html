@@ -28,10 +28,11 @@
   
     
   
-  <meta name="description" content="IntroductionEn biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.">
+  <meta name="description" content="L’expérimentation suit une démarche scientifique illustrée ci-dessous. La statistique est utile pour valider les mesures effectuées, mais la finalité de toute expérience est ses résultats et son interprétation.
+En biologie comme dans la plupart des domaines scientifiques, on souhaite caractériser ou comparer des populations, autrement dit l’ensemble des sujets d’un groupe constitué d’un nombre élevé, parfois infini, de sujets. Mais, sur le plan pratique, le biologiste ne peut étudier qu’un échantillon, autrement dit un nombre réduit d’individus de chaque population.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/2015-07-23-r-rmarkdown/">
+  <link rel="alternate" hreflang="en-us" href="/post/2018-02-02-experimentation/">
 
   
 
@@ -106,7 +107,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/2015-07-23-r-rmarkdown/">
+  <link rel="canonical" href="/post/2018-02-02-experimentation/">
 
   
   
@@ -118,9 +119,10 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="SamGG">
-  <meta property="og:url" content="/post/2015-07-23-r-rmarkdown/">
-  <meta property="og:title" content="Intro to False Discovery Rate | SamGG">
-  <meta property="og:description" content="IntroductionEn biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/2018-02-02-experimentation/">
+  <meta property="og:title" content="Experimentation | SamGG">
+  <meta property="og:description" content="L’expérimentation suit une démarche scientifique illustrée ci-dessous. La statistique est utile pour valider les mesures effectuées, mais la finalité de toute expérience est ses résultats et son interprétation.
+En biologie comme dans la plupart des domaines scientifiques, on souhaite caractériser ou comparer des populations, autrement dit l’ensemble des sujets d’un groupe constitué d’un nombre élevé, parfois infini, de sujets. Mais, sur le plan pratique, le biologiste ne peut étudier qu’un échantillon, autrement dit un nombre réduit d’individus de chaque population."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2015-07-23T21:13:14-05:00">
@@ -132,7 +134,7 @@
 
   
 
-  <title>Intro to False Discovery Rate | SamGG</title>
+  <title>Experimentation | SamGG</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -351,7 +353,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Intro to False Discovery Rate</h1>
+  <h1 itemprop="name">Experimentation</h1>
 
   
 
@@ -383,7 +385,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    5 min read
+    3 min read
   </span>
   
 
@@ -397,7 +399,7 @@
   <span class="article-categories">
     <i class="fas fa-folder"></i>
     
-    <a href="/categories/r/">R</a>
+    <a href="/categories/stat/">Stat</a>
     
   </span>
   
@@ -409,35 +411,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Intro%20to%20False%20Discovery%20Rate&amp;url=%2fpost%2f2015-07-23-r-rmarkdown%2f"
+         href="https://twitter.com/intent/tweet?text=Experimentation&amp;url=%2fpost%2f2018-02-02-experimentation%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2015-07-23-r-rmarkdown%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2018-02-02-experimentation%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2015-07-23-r-rmarkdown%2f&amp;title=Intro%20to%20False%20Discovery%20Rate"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2018-02-02-experimentation%2f&amp;title=Experimentation"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2015-07-23-r-rmarkdown%2f&amp;title=Intro%20to%20False%20Discovery%20Rate"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2018-02-02-experimentation%2f&amp;title=Experimentation"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Intro%20to%20False%20Discovery%20Rate&amp;body=%2fpost%2f2015-07-23-r-rmarkdown%2f">
+         href="mailto:?subject=Experimentation&amp;body=%2fpost%2f2018-02-02-experimentation%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -476,88 +478,58 @@
       
 
 
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<p>En biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus. Une façon d’aborder la question est de répéter sur chaque marqueur un test statistique classique (test de Student, ANOVA…). Ces tests statistiques s’interprétent dans le cadre d’un seuil de p-value de 5%. Ce seuil correspond au risque de se tromper. Lorsque le test est appliqué une fois, le risque est de 5%, soit 1/20. Lorsque le test est répété de multiples fois, le risque est multiplié par le nombre de répétitions. Ainsi, au seuil de 5%, 5% x 1000 marqueurs = 50 tests ou marqueurs seront déclarés statistiquement significatifs par l’effet seul du hasard, ie seulement parce que le risque a été provoqué 1000 au lieu d’une seule fois. Au seuil de 1%, 1% x 1000 marqueurs = 10 tests seront déclarés statistiquement significatifs par l’effet du hasard. Ces marqueurs déclarés statistiquement significatifs par l’effet seul du hasard sont donc des fausses découvertes pour l’expérimentateur. Avec une matrice de mesures de grande taille, l’expérimentateur est confronté au problème des tests multiples. La p-value utilisée classiquement n’est plus un critère pour déclarer intéressant un marqueur. Nous allons simuler un jeu de données pour comprendre ce phénomène, et nous allons voir une méthode graphique pour contrôler le nombres de fausses découvertes.</p>
-</div>
-<div id="jeu-de-donnees-sans-differences" class="section level1">
-<h1>Jeu de données sans différences</h1>
-<p>Nous allons étudier un jeu de données simulées. Ce jeu simule 2 groupes de 10 individus et 1000 marqueurs, donc une matrice de 1000 lignes x 20 colonnes. Commençons par définir des données qui ne contiennent pas de réelles différences.</p>
-<pre class="r"><code># Synchronisation du generateur de nombre aleatoire
-set.seed(1)
-
-# Jeu aléatoire de donnees suivant une loi gaussienne
-mat=matrix(rnorm(20000),1000,20)
-mat2=mat  # archivage</code></pre>
-<p>Nous pouvons représenter le jeu de données via une heatmap, une carte de chaleur. L’idée est de transformer les valeurs numériques de la matrice par une couleur afin d’obtenir une image. L’oeil et le cerveau sont plus sensibles et réactifs à une image qu’à une matrice de nombres.</p>
-<pre class="r"><code># heatmap, echelle de couleurs par défaut
-image(t(mat)[,rev(seq(nrow(mat)))], axes = F)</code></pre>
-<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<pre class="r"><code># echelle de couleurs en double degrade negatif et positif
-image(t(mat)[,rev(seq(nrow(mat)))], axes = F, col = colorRampPalette(c(&quot;Blue2&quot;, &quot;White&quot;, &quot;Red2&quot;))(32))</code></pre>
-<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
-<p>Nous allons définir notre score pour déclarer un marqueur intéressant. Le test de Student et sa p-value est un choix classique. Nous voulons effectuer le test sur toutes les lignes de la matrice grâce à une boucle. Pour réaliser le coeur de la boucle, travaillons sur la première ligne pour définir le code R.</p>
-<pre class="r"><code># Calcul du test de Student sur la 1ere ligne
-res = t.test(mat[1,1:10],mat[1,11:20])
-res  # affiche le contenu de la variable resultant du test de Student
-## 
-##  Welch Two Sample t-test
-## 
-## data:  mat[1, 1:10] and mat[1, 11:20]
-## t = -0.74448, df = 17.52, p-value = 0.4665
-## alternative hypothesis: true difference in means is not equal to 0
-## 95 percent confidence interval:
-##  -1.2818449  0.6120472
-## sample estimates:
-##  mean of x  mean of y 
-## -0.5187188 -0.1838200</code></pre>
-<p>La structure du résultat permet d’identifier la partie qui nous intéresse.</p>
-<pre class="r"><code>str(res)  # structure du résultat
-## List of 9
-##  $ statistic  : Named num -0.744
-##   ..- attr(*, &quot;names&quot;)= chr &quot;t&quot;
-##  $ parameter  : Named num 17.5
-##   ..- attr(*, &quot;names&quot;)= chr &quot;df&quot;
-##  $ p.value    : num 0.466
-##  $ conf.int   : num [1:2] -1.282 0.612
-##   ..- attr(*, &quot;conf.level&quot;)= num 0.95
-##  $ estimate   : Named num [1:2] -0.519 -0.184
-##   ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;mean of x&quot; &quot;mean of y&quot;
-##  $ null.value : Named num 0
-##   ..- attr(*, &quot;names&quot;)= chr &quot;difference in means&quot;
-##  $ alternative: chr &quot;two.sided&quot;
-##  $ method     : chr &quot;Welch Two Sample t-test&quot;
-##  $ data.name  : chr &quot;mat[1, 1:10] and mat[1, 11:20]&quot;
-##  - attr(*, &quot;class&quot;)= chr &quot;htest&quot;</code></pre>
-<p>On extrait la partie du résultat en utilisant le symbole <code>$</code>.</p>
-<pre class="r"><code>res$p.value  # extraction de la p-value
-## [1] 0.4664565</code></pre>
-<p>Maintenant que le code est défini, nous l’insérons dans une boucle. Il existe plusieurs possibilités pour enregistrer le score (ie la p-value) dans un vecteur qui nous permettra ensuite de retenir les marqueurs les plus pertinents. Pour la boucle nous choisissons de pré-définir le vecteur de résultat.</p>
-<pre class="r"><code># Boucle pour extraire toutes les p-values
-
-# Version avec accumulation
-# vec=NULL
-# for(i in 1:nrow(mat)) {
-  # res2=t.test(mat[i,1:10],mat[i,11:20])
-  # print(res2$p.value)
-  # vec=c(vec,res2$p.value)
-# }
-# vec
-
-# Version avec pre-initilisation
-vec = rep(NA, 1000)
-# vec = matrix()  # version je-me-pose-pas-de-question
-for(i in 1:nrow(mat)) {
-  res2 = t.test(mat[i,1:10], mat[i,11:20])
-  #print(res2$p.value)
-  vec[i] = res2$p.value
-}</code></pre>
-<p>On vérifie la variabilité du résultat.</p>
-<pre class="r"><code>head(vec)
-## [1] 0.46645650 0.83996475 0.46990800 0.02188267 0.71253108 0.46391811
-tail(vec)
-## [1] 0.33568922 0.34935958 0.03896348 0.88552095 0.86810947 0.84155214</code></pre>
-</div>
+<p>L’expérimentation suit une démarche scientifique illustrée ci-dessous. La statistique est utile pour valider les mesures effectuées, mais <strong>la finalité de toute expérience est ses résultats et son interprétation</strong>.</p>
+<p>En biologie comme dans la plupart des domaines scientifiques, on souhaite caractériser ou comparer des populations, autrement dit l’ensemble des sujets d’un groupe constitué d’un nombre élevé, parfois infini, de sujets. Mais, sur le plan pratique, le biologiste ne peut étudier qu’un échantillon, autrement dit un nombre réduit d’individus de chaque population. Cependant l’objectif de l’expérience est de <b>généraliser à la population le résultat déterminé sur un échantillon.</p>
+<p>L’objectif d’une expérience est de <strong>mesurer un effet</strong>, c’est à dire une différence le plus souvent ou une corrélation. Travaillant sur un échantillon, l’expérimentateur obtient une <strong>mesure</strong> et peut déterminer une <strong>erreur, </strong>c’est à dire une estimation de l’effet et une incertitude de la mesure. Ces deux notions sont reprises dans les tests statistiques et résumées par la p-value qui est très utilisée et souvent trop sur-interprétée. La p-value est la probabilité de mesurer un effet supérieur ou égal dans un échantillon issu de la population de référence. <strong>La p-value est le risque de déclarer un faux-positif</strong>. Le seuil est arbitrairement fixé à 5%, mais cela mériterait d’être ajusté puisque la p-value dépend de la taille de l’échantillon.</p>
+L’outil statistique ne peut être utilisé que si chaque échantillon est extrait de la population étudiée par une méthode <b>aléatoire</b>. Il faut éviter tout biais dans la sélection des individus, tout effet confondant avec le traitement effectué, toute erreur systématique qui serait préjudiciable aux conclusions. Il est donc important de <strong>réfléchir au design de l’expérience</strong> et d’<strong>annoter sa réalisation</strong>.
+<h3>
+Conclusion
+</h3>
+L’objectif d’une expérience est d’estimer un effet et son incertitude. La p-value indique “seulement” le risque de déclarer un faux-positif. La finalité de l’expérience reste l’interprétation de l’effet dans son contexte scientifique. Le design expérimental vise à obtenir une estimation sur laquelle bâtir une interprétation sérieuse.
+<h3>
+Démarche scientifique
+</h3>
+La démarche scientifique consiste en plusieurs étapes, chacune mettant en jeu des notions spécifiques:
+<ul>
+<pre><code>&lt;li&gt;Poser une question fondée sur des hypothèses</code></pre>
+<ul>
+<pre><code>&lt;li&gt;science, expertise&lt;/li&gt;</code></pre>
+</ul>
+</li>
+<pre><code>&lt;li&gt;Définir une expérience bien pensée/contrôlée</code></pre>
+<ul>
+<pre><code>&lt;li&gt;plan d&#39;expérience&lt;/li&gt;</code></pre>
+</ul>
+</li>
+<pre><code>&lt;li&gt;Réaliser l&#39;expérience, annoter son déroulement&lt;/li&gt;
+&lt;li&gt;Organiser les mesures, les décrire</code></pre>
+<ul>
+<pre><code>&lt;li&gt;statistique descriptive&lt;/li&gt;</code></pre>
+</ul>
+</li>
+<pre><code>&lt;li&gt;Comparer les mesures inter-groupes</code></pre>
+<ul>
+<pre><code>&lt;li&gt;statistique inférentielle, test d&#39;hypothèse&lt;/li&gt;</code></pre>
+</ul>
+</li>
+<pre><code>&lt;li&gt;Interpréter les résultats</code></pre>
+<ul>
+<pre><code>&lt;li&gt;science, expertise&lt;/li&gt;</code></pre>
+</ul>
+</li>
+</ul>
+<h3>
+Ressources
+</h3>
+<ul>
+<pre><code>&lt;li&gt;Présentations &quot;Statistiques pour l&#39;expérimentation&quot; lors des formations en expérimentation</code></pre>
+<ul>
+<pre><code>&lt;li&gt;résumé : &lt;a title=&quot;170907-experimentation_statistics_basics&quot; href=&quot;https://decodebiodata.files.wordpress.com/2018/04/170907-experimentation_statistics_basics.pdf&quot;&gt;170907-experimentation_statistics_basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;complet : &lt;a title=&quot;170523-experimentation_statistics&quot; href=&quot;https://decodebiodata.files.wordpress.com/2018/04/170523-experimentation_statistics.pdf&quot;&gt;170523-experimentation_statistics&lt;/a&gt;&lt;/li&gt;</code></pre>
+</ul>
+</li>
+<pre><code>&lt;li&gt;Calcul de puissance via le logiciel gratuit &lt;a href=&quot;http://www.gpower.hhu.de/en.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GPower&lt;/a&gt; de l&#39;université de Düsseldorf et des exemples de &lt;a href=&quot;https://stats.idre.ucla.edu/other/gpower/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;IDRE/UCLA&lt;/a&gt;. Les plus utiles sont probablement le &lt;a href=&quot;https://stats.idre.ucla.edu/gpower/power-analysis-for-two-group-independent-sample-t-test/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;test de Student où 2 groupes indépendants&lt;/a&gt; (ie des individus différents) sont comparés, et le &lt;a href=&quot;https://stats.idre.ucla.edu/gpower/power-analysis-for-two-group-independent-sample-t-test/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;test de Student où le même groupe&lt;/a&gt; (ie mêmes individus) est comparé avant et après l&#39;expérience.&lt;/li&gt;</code></pre>
+</ul>
 
     </div>
 
@@ -566,9 +538,7 @@ tail(vec)
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/r-markdown/">R Markdown</a>
-  
-  <a class="badge badge-light" href="/tags/fdr/">FDR</a>
+  <a class="badge badge-light" href="/tags/logiciel/">logiciel</a>
   
   <a class="badge badge-light" href="/tags/statistics/">statistics</a>
   
@@ -595,6 +565,18 @@ tail(vec)
 
       
       
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/2018-02-02-logiciels-statistiques/">Logiciels Statistiques</a></li>
+          
+          <li><a href="/post/2018-02-02-tests-multiples/">Intro to False Discovery Rate</a></li>
+          
+        </ul>
+      </div>
+      
     
 
     
@@ -607,10 +589,6 @@ tail(vec)
 
 <div class="container">
   <footer class="site-footer">
-  
-  <p class="powered-by">
-    <a href="/privacy/">Privacy Policy</a>
-  </p>
   
 
   <p class="powered-by">

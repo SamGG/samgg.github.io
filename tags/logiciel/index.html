@@ -33,7 +33,7 @@
   <meta name="description" content="Academic Research Engineer    Computational Biology">
 
   
-  <link rel="alternate" hreflang="en-us" href="/categories/r/">
+  <link rel="alternate" hreflang="en-us" href="/tags/logiciel/">
 
   
 
@@ -100,15 +100,15 @@
   
 
   
-  <link rel="alternate" href="/categories/r/index.xml" type="application/rss+xml" title="SamGG">
-  <link rel="feed" href="/categories/r/index.xml" type="application/rss+xml" title="SamGG">
+  <link rel="alternate" href="/tags/logiciel/index.xml" type="application/rss+xml" title="SamGG">
+  <link rel="feed" href="/tags/logiciel/index.xml" type="application/rss+xml" title="SamGG">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/categories/r/">
+  <link rel="canonical" href="/tags/logiciel/">
 
   
   
@@ -120,8 +120,8 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="SamGG">
-  <meta property="og:url" content="/categories/r/">
-  <meta property="og:title" content="R | SamGG">
+  <meta property="og:url" content="/tags/logiciel/">
+  <meta property="og:title" content="logiciel | SamGG">
   <meta property="og:description" content="Academic Research Engineer    Computational Biology"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
@@ -132,7 +132,7 @@
 
   
 
-  <title>R | SamGG</title>
+  <title>logiciel | SamGG</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -351,7 +351,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1 itemprop="name">R</h1>
+  <h1 itemprop="name">logiciel</h1>
 
   
 
@@ -366,10 +366,20 @@
   
   
   <div>
-    <h2><a href="/post/2018-02-02-tests-multiples/">Intro to False Discovery Rate</a></h2>
+    <h2><a href="/post/2018-02-02-experimentation/">Experimentation</a></h2>
     <div class="article-style">
       
-      IntroductionEn biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.
+      L’expérimentation suit une démarche scientifique illustrée ci-dessous. La statistique est utile pour valider les mesures effectuées, mais la finalité de toute expérience est ses résultats et son interprétation.
+En biologie comme dans la plupart des domaines scientifiques, on souhaite caractériser ou comparer des populations, autrement dit l’ensemble des sujets d’un groupe constitué d’un nombre élevé, parfois infini, de sujets. Mais, sur le plan pratique, le biologiste ne peut étudier qu’un échantillon, autrement dit un nombre réduit d’individus de chaque population.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/post/2018-02-02-logiciels-statistiques/">Logiciels Statistiques</a></h2>
+    <div class="article-style">
+      
+      Il existe de nombreux logiciels pour réaliser des calculs statistiques et pas un bon nombre sont gratuits. Cependant, assimiler l’interface graphique de chacun peut prendre du temps. Les logiciels que je retiens proposent plusieurs types d’analyse, ce qui rentabilise l’effort d’apprentissage, disposent d’une documentation et sont mis à jour régulièrement. Quelque soit votre choix, regardez vos données avant de les analyser aveuglement et ne bâtissez pas votre interprétation que sur la p-value.
       
     </div>
   </div>

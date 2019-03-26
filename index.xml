@@ -6,71 +6,8 @@
     <description>Recent content in SamGG on SamGG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0200</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Display Jupyter Notebooks with Academic</title>
-      <link>/post/jupyter/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/jupyter/</guid>
-      <description>
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
-Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;./academic_0_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;Welcome to Academic!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;install-python-and-jupyter&#34;&gt;Install Python and Jupyter&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and Jupyter notebook.&lt;/p&gt;
-
-&lt;p&gt;Otherwise, for advanced users, install Jupyter notebook with &lt;code&gt;pip3 install jupyter&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;create-a-new-blog-post-as-usual-https-sourcethemes-com-academic-docs-managing-content-create-a-blog-post&#34;&gt;Create a new blog post &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-a-blog-post&#34; target=&#34;_blank&#34;&gt;as usual&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY_WEBSITE_FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;my-post&lt;/code&gt; with the file path to your Academic website folder and a name for your blog post (without spaces), respectively:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd &amp;lt;MY_WEBSITE_FOLDER&amp;gt;
-hugo new  --kind post post/my-post
-cd &amp;lt;MY_WEBSITE_FOLDER&amp;gt;/content/post/my-post/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
-
-&lt;p&gt;Run the following command to start Jupyter within your new blog post folder. Then create a new Jupyter notebook (&lt;em&gt;New &amp;gt; Python Notebook&lt;/em&gt;) or upload a notebook.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter notebook
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert Untitled.ipynb --to markdown --NbConvertApp.output_files_dir=.
-
-# Copy the contents of Untitled.md and append it to index.md:
-cat Untitled.md | tee -a index.md
-
-# Remove the temporary file:
-rm Untitled.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
-
-&lt;p&gt;Open &lt;code&gt;index.md&lt;/code&gt; in your text editor and edit the title etc. in the &lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34; target=&#34;_blank&#34;&gt;front matter&lt;/a&gt; according to your preference.&lt;/p&gt;
-
-&lt;p&gt;To set a &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
-
-&lt;p&gt;For other tips, such as using math, see the guide on &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Example Page</title>
@@ -89,16 +26,6 @@ rm Untitled.md
 &lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0200</pubDate>
-      
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
@@ -156,388 +83,6 @@ rm Untitled.md
     </item>
     
     <item>
-      <title>Academic: the website designer for Hugo</title>
-      <link>/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>/post/getting-started/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Academic&lt;/strong&gt; makes it easy to create a beautiful website for free using Markdown. Customize anything on your site with widgets, themes, and language packs.&lt;/p&gt;
-
-&lt;p&gt;Follow our easy &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/&#34; target=&#34;_blank&#34;&gt;step by step guide&lt;/a&gt; to learn how to build your own free website with Academic. &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34;&gt;Check out the personal demo&lt;/a&gt; or the &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;business demo&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;View the documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://discuss.gohugo.io/&#34; target=&#34;_blank&#34;&gt;Ask a question&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34;&gt;Request a feature or report a bug&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updating? View the &lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support development of Academic:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34;&gt;Donate a coffee&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34;&gt;Become a backer on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34;&gt;Decorate your laptop or journal with an Academic sticker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34;&gt;Wear the T-shirt&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Key features:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Easily manage various content including homepage, blog posts, publications, talks, and projects&lt;/li&gt;
-&lt;li&gt;Extensible via &lt;strong&gt;color themes&lt;/strong&gt; and &lt;strong&gt;widgets/plugins&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Write in &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt; for easy formatting and code highlighting, with &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; for mathematical expressions&lt;/li&gt;
-&lt;li&gt;Social/academic network linking, &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;, and &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; comments&lt;/li&gt;
-&lt;li&gt;Responsive and mobile friendly&lt;/li&gt;
-&lt;li&gt;Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;Multilingual and easy to customize&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;color-themes&#34;&gt;Color Themes&lt;/h2&gt;
-
-&lt;p&gt;Academic is available in different color themes and font themes.&lt;/p&gt;
-
-
-
-
-
-&lt;div class=&#34;gallery&#34;&gt;
-
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-1950s.png&#34; data-caption=&#34;1950s&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-1950s_huaf5482f8cea0c5a703a328640e3b7509_21614_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-apogee.png&#34; data-caption=&#34;Apogee&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-apogee_hu4b45d99db97150df01464c393bfd17d4_24119_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-coffee-playfair.png&#34; data-caption=&#34;Coffee theme with Playfair font&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-coffee-playfair_hu446a8f670cc5622adcc77b97ba95f6c5_22462_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-cupcake.png&#34; data-caption=&#34;Cupcake&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-cupcake_hueba8cfa8cfbc7543924fcbf387a99e92_23986_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-dark.png&#34; data-caption=&#34;Dark&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-dark_hu1e8601ecc47f58eada7743fdcd709d3d_21456_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-default.png&#34; data-caption=&#34;Default&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-default_huba6228b7bdf30e2f03f12ea91b2cba0d_21751_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-forest.png&#34; data-caption=&#34;Forest&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-forest_hu4f093a1c683134431456584193ea41ee_21797_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-ocean.png&#34; data-caption=&#34;Ocean&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-ocean_hu14831ccafc2219f30a7a096fa7617e01_21760_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-
-  
-&lt;/div&gt;
-
-&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-
-&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;one-click install using your web browser (recommended)&lt;/li&gt;
-&lt;li&gt;install on your computer using Git with the Command Prompt/Terminal app&lt;/li&gt;
-&lt;li&gt;install on your computer by downloading the ZIP files&lt;/li&gt;
-&lt;li&gt;install on your computer with RStudio&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;quick-install-using-your-web-browser&#34;&gt;Quick install using your web browser&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart&#34; target=&#34;_blank&#34;&gt;Install Academic with Netlify&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Netlify will provide you with a customizable URL to access your new site&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;On GitHub, go to your newly created &lt;code&gt;academic-kickstart&lt;/code&gt; repository and edit &lt;code&gt;config.toml&lt;/code&gt; to personalize your site. Shortly after saving the file, your site will automatically update&lt;/li&gt;
-&lt;li&gt;Read the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Quick Start Guide&lt;/a&gt; to learn how to add Markdown content. For inspiration, refer to the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite&#34; target=&#34;_blank&#34;&gt;Markdown content&lt;/a&gt; which powers the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34;&gt;Demo&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;install-with-git&#34;&gt;Install with Git&lt;/h3&gt;
-
-&lt;p&gt;Prerequisites:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://git-scm.com/downloads&#34; target=&#34;_blank&#34;&gt;Download and install Git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io/getting-started/installing/#quick-install&#34; target=&#34;_blank&#34;&gt;Download and install Hugo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34; target=&#34;_blank&#34;&gt;Fork&lt;/a&gt; the &lt;em&gt;Academic Kickstart&lt;/em&gt; repository and clone your fork with Git:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;Note that if you forked Academic Kickstart, the above command should be edited to clone your fork, i.e. replace &lt;code&gt;sourcethemes&lt;/code&gt; with your GitHub username.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Initialize the theme:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd My_Website
-git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;install-with-zip&#34;&gt;Install with ZIP&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart/archive/master.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt; and extract &lt;em&gt;Academic Kickstart&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/archive/master.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt; and extract the &lt;em&gt;Academic theme&lt;/em&gt; to the &lt;code&gt;themes/academic/&lt;/code&gt; folder from the above step&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;install-with-rstudio&#34;&gt;Install with RStudio&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34;&gt;View the guide to installing Academic with RStudio&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;If you installed on your computer, view your new website by running the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now visit &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;localhost:1313&lt;/a&gt; and your new Academic powered website will appear. Otherwise, if using Netlify, they will provide you with your URL.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Read the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Quick Start Guide&lt;/a&gt; to learn how to add Markdown content, customize your site, and deploy it. For inspiration, refer to the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite&#34; target=&#34;_blank&#34;&gt;Markdown content&lt;/a&gt; which powers the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Build your site by running the &lt;code&gt;hugo&lt;/code&gt; command. Then &lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/&#34; target=&#34;_blank&#34;&gt;host it for free using Github Pages&lt;/a&gt; or Netlify (refer to the first installation method). Alternatively, copy the generated &lt;code&gt;public/&lt;/code&gt; directory (by FTP, Rsync, etc.) to your production web server (such as a university&amp;rsquo;s hosting service).&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
-
-&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on &lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt; to help keep track of updates and check out the &lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34;&gt;release notes&lt;/a&gt; prior to updating your site.&lt;/p&gt;
-
-&lt;p&gt;Before updating the framework, it is recommended to make a backup of your entire website directory (or at least your &lt;code&gt;themes/academic&lt;/code&gt; directory) and record your current version number.&lt;/p&gt;
-
-&lt;p&gt;By default, Academic is installed as a Git submodule which can be updated by running the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule update --remote --merge
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34;&gt;Check out the update guide&lt;/a&gt; for full instructions and alternative methods.&lt;/p&gt;
-
-&lt;h2 id=&#34;feedback-contributing&#34;&gt;Feedback &amp;amp; Contributing&lt;/h2&gt;
-
-&lt;p&gt;Please use the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34;&gt;issue tracker&lt;/a&gt; to let me know about any bugs or feature requests, or alternatively make a pull request.&lt;/p&gt;
-
-&lt;p&gt;For support, head over to the &lt;a href=&#34;http://discuss.gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo discussion forum&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>A Person Re-Identification System For Mobile Devices</title>
       <link>/publication/person-re-id/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0200</pubDate>
@@ -548,11 +93,75 @@ git submodule update --init --recursive
     </item>
     
     <item>
-      <title>Intro to False Discovery Rate</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <title>Experimentation</title>
+      <link>/post/2018-02-02-experimentation/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/post/2018-02-02-experimentation/</guid>
+      <description>
+
+
+&lt;p&gt;L’expérimentation suit une démarche scientifique illustrée ci-dessous. La statistique est utile pour valider les mesures effectuées, mais &lt;strong&gt;la finalité de toute expérience est ses résultats et son interprétation&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En biologie comme dans la plupart des domaines scientifiques, on souhaite caractériser ou comparer des populations, autrement dit l’ensemble des sujets d’un groupe constitué d’un nombre élevé, parfois infini, de sujets. Mais, sur le plan pratique, le biologiste ne peut étudier qu’un échantillon, autrement dit un nombre réduit d’individus de chaque population. Cependant l’objectif de l’expérience est de &lt;b&gt;généraliser à la population le résultat déterminé sur un échantillon.&lt;/p&gt;
+&lt;p&gt;L’objectif d’une expérience est de &lt;strong&gt;mesurer un effet&lt;/strong&gt;, c’est à dire une différence le plus souvent ou une corrélation. Travaillant sur un échantillon, l’expérimentateur obtient une &lt;strong&gt;mesure&lt;/strong&gt; et peut déterminer une &lt;strong&gt;erreur, &lt;/strong&gt;c’est à dire une estimation de l’effet et une incertitude de la mesure. Ces deux notions sont reprises dans les tests statistiques et résumées par la p-value qui est très utilisée et souvent trop sur-interprétée. La p-value est la probabilité de mesurer un effet supérieur ou égal dans un échantillon issu de la population de référence. &lt;strong&gt;La p-value est le risque de déclarer un faux-positif&lt;/strong&gt;. Le seuil est arbitrairement fixé à 5%, mais cela mériterait d’être ajusté puisque la p-value dépend de la taille de l’échantillon.&lt;/p&gt;
+L’outil statistique ne peut être utilisé que si chaque échantillon est extrait de la population étudiée par une méthode &lt;b&gt;aléatoire&lt;/b&gt;. Il faut éviter tout biais dans la sélection des individus, tout effet confondant avec le traitement effectué, toute erreur systématique qui serait préjudiciable aux conclusions. Il est donc important de &lt;strong&gt;réfléchir au design de l’expérience&lt;/strong&gt; et d’&lt;strong&gt;annoter sa réalisation&lt;/strong&gt;.
+&lt;h3&gt;
+Conclusion
+&lt;/h3&gt;
+L’objectif d’une expérience est d’estimer un effet et son incertitude. La p-value indique “seulement” le risque de déclarer un faux-positif. La finalité de l’expérience reste l’interprétation de l’effet dans son contexte scientifique. Le design expérimental vise à obtenir une estimation sur laquelle bâtir une interprétation sérieuse.
+&lt;h3&gt;
+Démarche scientifique
+&lt;/h3&gt;
+La démarche scientifique consiste en plusieurs étapes, chacune mettant en jeu des notions spécifiques:
+&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;Poser une question fondée sur des hypothèses&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;science, expertise&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;Définir une expérience bien pensée/contrôlée&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;plan d&amp;#39;expérience&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;Réaliser l&amp;#39;expérience, annoter son déroulement&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Organiser les mesures, les décrire&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;statistique descriptive&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;Comparer les mesures inter-groupes&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;statistique inférentielle, test d&amp;#39;hypothèse&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;Interpréter les résultats&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;science, expertise&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;
+Ressources
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;Présentations &amp;quot;Statistiques pour l&amp;#39;expérimentation&amp;quot; lors des formations en expérimentation&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;résumé : &amp;lt;a title=&amp;quot;170907-experimentation_statistics_basics&amp;quot; href=&amp;quot;https://decodebiodata.files.wordpress.com/2018/04/170907-experimentation_statistics_basics.pdf&amp;quot;&amp;gt;170907-experimentation_statistics_basics&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;complet : &amp;lt;a title=&amp;quot;170523-experimentation_statistics&amp;quot; href=&amp;quot;https://decodebiodata.files.wordpress.com/2018/04/170523-experimentation_statistics.pdf&amp;quot;&amp;gt;170523-experimentation_statistics&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;Calcul de puissance via le logiciel gratuit &amp;lt;a href=&amp;quot;http://www.gpower.hhu.de/en.html&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener&amp;quot;&amp;gt;GPower&amp;lt;/a&amp;gt; de l&amp;#39;université de Düsseldorf et des exemples de &amp;lt;a href=&amp;quot;https://stats.idre.ucla.edu/other/gpower/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener&amp;quot;&amp;gt;IDRE/UCLA&amp;lt;/a&amp;gt;. Les plus utiles sont probablement le &amp;lt;a href=&amp;quot;https://stats.idre.ucla.edu/gpower/power-analysis-for-two-group-independent-sample-t-test/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener&amp;quot;&amp;gt;test de Student où 2 groupes indépendants&amp;lt;/a&amp;gt; (ie des individus différents) sont comparés, et le &amp;lt;a href=&amp;quot;https://stats.idre.ucla.edu/gpower/power-analysis-for-two-group-independent-sample-t-test/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener&amp;quot;&amp;gt;test de Student où le même groupe&amp;lt;/a&amp;gt; (ie mêmes individus) est comparé avant et après l&amp;#39;expérience.&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Intro to False Discovery Rate</title>
+      <link>/post/2018-02-02-tests-multiples/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2018-02-02-tests-multiples/</guid>
       <description>
 
 
@@ -572,10 +181,10 @@ mat2=mat  # archivage&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Nous pouvons représenter le jeu de données via une heatmap, une carte de chaleur. L’idée est de transformer les valeurs numériques de la matrice par une couleur afin d’obtenir une image. L’oeil et le cerveau sont plus sensibles et réactifs à une image qu’à une matrice de nombres.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# heatmap, echelle de couleurs par défaut
 image(t(mat)[,rev(seq(nrow(mat)))], axes = F)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# echelle de couleurs en double degrade negatif et positif
 image(t(mat)[,rev(seq(nrow(mat)))], axes = F, col = colorRampPalette(c(&amp;quot;Blue2&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;Red2&amp;quot;))(32))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Nous allons définir notre score pour déclarer un marqueur intéressant. Le test de Student et sa p-value est un choix classique. Nous voulons effectuer le test sur toutes les lignes de la matrice grâce à une boucle. Pour réaliser le coeur de la boucle, travaillons sur la première ligne pour définir le code R.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Calcul du test de Student sur la 1ere ligne
 res = t.test(mat[1,1:10],mat[1,11:20])
@@ -637,6 +246,95 @@ for(i in 1:nrow(mat)) {
 ## [1] 0.46645650 0.83996475 0.46990800 0.02188267 0.71253108 0.46391811
 tail(vec)
 ## [1] 0.33568922 0.34935958 0.03896348 0.88552095 0.86810947 0.84155214&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nous avons donc une p-value pour chaque marqueur. Nous allons décrire ce vecteur, numériquement et graphiquement.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Description numerique et graphique des p-values
+summary(vec)
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+## 0.001928 0.268153 0.484081 0.505745 0.755273 0.999250
+hist(vec, nclass = 20, ylim = c(0, 100)) # 1 barre = 0.05
+abline(h=50, lw=2, col=&amp;quot;red&amp;quot;)  # la hauteur moyenne des barres&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Les valeurs s’étendent de 0 à 1. L’histogramme nous montre que c’est une loi uniforme. Visuellement la moyenne est autour de 50.&lt;/p&gt;
+&lt;p&gt;En fait, la hauteur moyenne est égale aux nombres de tests multiplié par la largeur de la barre. Les p-values suivent une loi uniforme entre 0 et 1 ou 0% et 100%. L’histogramme est présenté avec des intervalles d’une largeur de 5% (0.05 ou 1/20). Visuellement la moyenne est autour de 50. Cette valeur est logique, elle provient du nombre de tests et de la largeur des barres de l’histogramme : 1000 x 1/20 = 50. &lt;strong&gt;Point important&lt;/strong&gt;, le nombre de tests déclarés statistiquement significatifs au seuil de 5% est de 50, 45 exactement dans le tirage aléatoire que nous avons effectué.&lt;/p&gt;
+&lt;p&gt;Questions : que se passe-t-il si l’on définit un seuil de significativité à 1% ? Quel est la hauteur moyenne ? Combien de p-value sont dans une tranche de 1% ? Quel est le pourcentage de p-value dans une tranche de 1% ?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;jeu-de-donnees-avec-differences&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Jeu de données avec différences&lt;/h1&gt;
+&lt;p&gt;Nous allons introduire dans la matrice de données un changement pour le premier groupe. Pour les 100 premiers marqueurs, nous simulons une augmentation de valeur moyenne.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mat3 = mat  # recopie intégrale
+mat3[1:100, 1:10] = mat[1:100, 1:10] + 2.50  # modification du 1er groupe&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;La carte de couleurs de ce nouveau jeu de données montre bien la changement introduit.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;image(t(mat3)[,rev(seq(nrow(mat)))], axes = F)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Refaisons le calcul du score.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Version avec pre-initilisation
+vec3 = rep(NA, 1000)
+for(i in 1:nrow(mat3)) {
+  res2 = t.test(mat3[i,1:10], mat3[i,11:20])
+  #print(res2$p.value)
+  vec3[i] = res2$p.value
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Refaisons la description graphique.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(vec3, nclass = 20) # 1 barre = 0.05
+# C&amp;#39;est une loi uniforme
+abline(h=45, lw=2, col=&amp;quot;red&amp;quot;)  # la hauteur moyenne des barres = 900/20&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Nous observons à nouveau une loi uniforme dans la moitié droite (p-value &amp;gt; 0.5) et la plus grande partie de l’histogramme. Cependant la différence la plus marquante est dans la première barre de l’histogramme, ie de 0 à 5%. En effet, la quantité de p-value est passée de 45 à 140, soit une augmentation d’environ 100 (95 exactement dans cette réalisation aléatoire).&lt;/p&gt;
+&lt;p&gt;La hauteur moyenne des barres est de 45 dans la partie droite de l’histogramme.&lt;/p&gt;
+&lt;p&gt;Donc pour un seuil classique de p-value à 5%, il y a 139 tests déclarés statistiquement significatifs. Cependant, à cause des tests multiples effectués, une partie de ces 139 marqueurs sont des fausses découvertes. Nous pouvons cette quantité en observant la partie droite de l’histogramme. Graphiquement et numériquement, nous estimons le nombre de fausses découvertes à 45 dans un intervalle de 5%. Donc sur les 139 tests déclarés statistiquement significatifs, 45 sont des fausses découvertes. On utilise comme critère le taux de fausses découvertes. C’est le nombre de fausses découvertes divisé par le nombre de découvertes. Le terme anglais est False Discovery Rate. Ici le taux est de 45 / 139, soit environ 1/3.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;count = table(cut(vec3, breaks = seq(0, 1, 0.05)))
+count
+## 
+##   (0,0.05] (0.05,0.1] (0.1,0.15] (0.15,0.2] (0.2,0.25] (0.25,0.3] 
+##        139         46         42         42         47         37 
+## (0.3,0.35] (0.35,0.4] (0.4,0.45] (0.45,0.5] (0.5,0.55] (0.55,0.6] 
+##         43         45         58         61         35         39 
+## (0.6,0.65] (0.65,0.7] (0.7,0.75] (0.75,0.8] (0.8,0.85] (0.85,0.9] 
+##         42         44         46         53         42         46 
+## (0.9,0.95]   (0.95,1] 
+##         48         45
+## 
+##   (0,0.05] (0.05,0.1] (0.1,0.15] (0.15,0.2] (0.2,0.25] (0.25,0.3] 
+##        139         46         42         42         47         37 
+## (0.3,0.35] (0.35,0.4] (0.4,0.45] (0.45,0.5] (0.5,0.55] (0.55,0.6] 
+##         43         45         58         61         35         39 
+## (0.6,0.65] (0.65,0.7] (0.7,0.75] (0.75,0.8] (0.8,0.85] (0.85,0.9] 
+##         42         44         46         53         42         46 
+## (0.9,0.95]   (0.95,1] 
+##         48         45
+mean(count[5:20])
+## [1] 45.6875
+## [1] 45.6875&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Si l’on souhaite diminuer ce taux, on se placera à un seuil de p-value plus faible. Prenons par exemple 1%. Ici l’estimation dans la partie droite donne 10 fausses découvertes en moyenne dans un intervalle de 1%. Le nombre de fausses découvertes est en moyenne de 10. Le premier intervalle de 0 à 1% totalise environ 110 découvertes. Donc le taux de fausses découvertes n’est plus que de 10 / 110, soit 1/10. C’est très nettement inférieur et fera perdre moins de temps à l’expérimentateur lors de la validation.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(vec3, nclass = 100) # 1 barre = 0.05
+# C&amp;#39;est une loi uniforme
+abline(h=1000/100, lw=2, col=&amp;quot;red&amp;quot;)  # la hauteur moyenne des barres&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Logiciels Statistiques</title>
+      <link>/post/2018-02-02-logiciels-statistiques/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2018-02-02-logiciels-statistiques/</guid>
+      <description>
+
+
+&lt;p&gt;Il existe de nombreux logiciels pour réaliser des calculs statistiques et pas un bon nombre sont gratuits. Cependant, assimiler l’interface graphique de chacun peut prendre du temps. Les logiciels que je retiens proposent plusieurs types d’analyse, ce qui rentabilise l’effort d’apprentissage, disposent d’une documentation et sont mis à jour régulièrement. Quelque soit votre choix, regardez vos données avant de les analyser aveuglement et ne bâtissez pas votre interprétation que sur la p-value.&lt;/p&gt;
+&lt;div id=&#34;past-paleontological-statistics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;PAST (PAleontological STatistics)&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://folk.uio.no/ohammer/past/&#34;&gt;Past&lt;/a&gt; est orienté vers la géologie et l’écologie mais propose des tests et des analyses courantes qui sont communes et utiles à toute discipline.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PAST is free software for scientific data analysis, with functions for data manipulation, plotting, univariate and multivariate statistics, ecological analysis, time series and spatial analysis, morphometrics and stratigraphy.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Des vidéos sont disponibles &lt;a href=&#34;https://youtu.be/FBD68IMbat4&#34; class=&#34;uri&#34;&gt;https://youtu.be/FBD68IMbat4&lt;/a&gt; - Two sample t test in PAST &lt;a href=&#34;https://youtu.be/9-dqbSIkZsg&#34; class=&#34;uri&#34;&gt;https://youtu.be/9-dqbSIkZsg&lt;/a&gt; - Mann Whitney test in past &lt;a href=&#34;https://youtu.be/A859NkPa5sI&#34; class=&#34;uri&#34;&gt;https://youtu.be/A859NkPa5sI&lt;/a&gt; - Paired tests in past statistics &lt;a href=&#34;https://youtu.be/LYg7Cj3RT5s&#34; class=&#34;uri&#34;&gt;https://youtu.be/LYg7Cj3RT5s&lt;/a&gt; - Past normal distribution test&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tanagra&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tanagra&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;http://eric.univ-lyon2.fr/~ricco/tanagra/fr/tanagra.html&#34;&gt;TANAGRA&lt;/a&gt; (&lt;a href=&#34;http://eric.univ-lyon2.fr/~ricco/tanagra/en/tanagra.html&#34;&gt;en&lt;/a&gt;) est un logiciel gratuit de DATA MINING destiné à l’enseignement et à la recherche. Il implémente une série de méthodes de fouilles de données issues du domaine de la statistique exploratoire, de l’analyse de données, de l’apprentissage automatique et des bases de données.&lt;/p&gt;
+&lt;p&gt;Tanagra dispose de nombreux &lt;a href=&#34;http://tutoriels-data-mining.blogspot.fr/&#34;&gt;tutoriels&lt;/a&gt; qui expliquent comment réaliser chaque analyse, mais aussi comment interpréter le résultat.&lt;/p&gt;
+&lt;p&gt;Son &lt;a href=&#34;http://chirouble.univ-lyon2.fr/~ricco/data-mining/&#34;&gt;Portail de Data-mining&lt;/a&gt; est très fourni en cours et méthodes.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
