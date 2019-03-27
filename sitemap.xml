@@ -20,6 +20,14 @@
     
     <url>
     
+      <loc>/privacy/</loc>
+      <lastmod>2018-06-28T00:00:00+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/talk/example/</loc>
       <lastmod>2017-01-01T00:00:00+01:00</lastmod>
     </url>
@@ -52,6 +60,14 @@
     
     <url>
     
+      <loc>/post/2018-03-02-anova/</loc>
+      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/2018-02-02-experimentation/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     </url>
@@ -68,7 +84,7 @@
     
     <url>
     
-      <loc>/post/2018-02-02-logiciels-statistiques/</loc>
+      <loc>/post/logiciels-statistiques/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     </url>
     
@@ -102,6 +118,15 @@
     
       <loc>/publication_types/2/</loc>
       <lastmod>2015-09-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/anova/</loc>
+      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -272,7 +297,7 @@
     <url>
     
       <loc>/tags/</loc>
-      <lastmod>2016-04-27T00:00:00+02:00</lastmod>
+      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
     

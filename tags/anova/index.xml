@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ANOVA on SamGG</title>
+    <link>/tags/anova/</link>
+    <description>Recent content in ANOVA on SamGG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/anova/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ANalysis Of VAriance</title>
+      <link>/post/2018-03-02-anova/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2018-03-02-anova/</guid>
+      <description>L’analyse de la variance consiste à trouver une différence de valeur moyenne entre différents groupes de mesures, en s’appuyant sur la mesure de variance. Si tous les groupes proviennent de la même population :
+leur moyenne doit être raisonnablement identique (compte tenu de la dispersion de la population),leur dispersion aussi,et si l’on mélange toutes les mesures dans un seul groupe, sa dispersion doit être identique à la dispersion de chaque groupe.</description>
+    </item>
+    
+  </channel>
+</rss>

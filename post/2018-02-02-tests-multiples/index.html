@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="IntroductionEn biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.">
+  <meta name="description" content="En biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/2018-02-02-tests-multiples/">
@@ -120,7 +120,7 @@
   <meta property="og:site_name" content="SamGG">
   <meta property="og:url" content="/post/2018-02-02-tests-multiples/">
   <meta property="og:title" content="Intro to False Discovery Rate | SamGG">
-  <meta property="og:description" content="IntroductionEn biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content="En biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2015-07-23T21:13:14-05:00">
@@ -476,27 +476,30 @@
       
 
 
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<p>En biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus. Une façon d’aborder la question est de répéter sur chaque marqueur un test statistique classique (test de Student, ANOVA…). Ces tests statistiques s’interprétent dans le cadre d’un seuil de p-value de 5%. Ce seuil correspond au risque de se tromper. Lorsque le test est appliqué une fois, le risque est de 5%, soit 1/20. Lorsque le test est répété de multiples fois, le risque est multiplié par le nombre de répétitions. Ainsi, au seuil de 5%, 5% x 1000 marqueurs = 50 tests ou marqueurs seront déclarés statistiquement significatifs par l’effet seul du hasard, ie seulement parce que le risque a été provoqué 1000 au lieu d’une seule fois. Au seuil de 1%, 1% x 1000 marqueurs = 10 tests seront déclarés statistiquement significatifs par l’effet du hasard. Ces marqueurs déclarés statistiquement significatifs par l’effet seul du hasard sont donc des fausses découvertes pour l’expérimentateur. Avec une matrice de mesures de grande taille, l’expérimentateur est confronté au problème des tests multiples. La p-value utilisée classiquement n’est plus un critère pour déclarer intéressant un marqueur. Nous allons simuler un jeu de données pour comprendre ce phénomène, et nous allons voir une méthode graphique pour contrôler le nombres de fausses découvertes.</p>
-</div>
+<p>En biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus. Une façon d’aborder la question est de répéter sur chaque marqueur un test statistique classique (test de Student, ANOVA, etc). Ces tests statistiques s’interprétent dans le cadre d’un seuil de p-value de 5%. Ce seuil correspond au risque de se tromper. Lorsque le test est appliqué une fois, le risque est de 5%, soit 1/20. Lorsque le test est répété de multiples fois, le risque est multiplié par le nombre de répétitions. Ainsi, au seuil de 5%, 5% x 1000 marqueurs = 50 tests ou marqueurs seront déclarés statistiquement significatifs par l’effet seul du hasard, ie seulement parce que le risque a été provoqué 1000 au lieu d’une seule fois. Au seuil de 1%, 1% x 1000 marqueurs = 10 tests seront déclarés statistiquement significatifs par l’effet du hasard. Ces marqueurs déclarés statistiquement significatifs par l’effet seul du hasard sont donc des fausses découvertes pour l’expérimentateur. Avec une matrice de mesures de grande taille, l’expérimentateur est confronté au problème des tests multiples. La p-value utilisée classiquement n’est plus un critère pour déclarer intéressant un marqueur. Nous allons simuler un jeu de données pour comprendre ce phénomène, et nous allons voir une méthode graphique pour contrôler le nombres de fausses découvertes.</p>
 <div id="jeu-de-donnees-sans-differences" class="section level1">
 <h1>Jeu de données sans différences</h1>
 <p>Nous allons étudier un jeu de données simulées. Ce jeu simule 2 groupes de 10 individus et 1000 marqueurs, donc une matrice de 1000 lignes x 20 colonnes. Commençons par définir des données qui ne contiennent pas de réelles différences.</p>
 <pre class="r"><code># Synchronisation du generateur de nombre aleatoire
 set.seed(1)
 
-# Jeu aléatoire de donnees suivant une loi gaussienne
-mat=matrix(rnorm(20000),1000,20)
+# Jeu aleatoire de donnees suivant une loi gaussienne
+mat=matrix(rnorm(20*1000),1000,20)
 mat2=mat  # archivage</code></pre>
-<p>Nous pouvons représenter le jeu de données via une heatmap, une carte de chaleur. L’idée est de transformer les valeurs numériques de la matrice par une couleur afin d’obtenir une image. L’oeil et le cerveau sont plus sensibles et réactifs à une image qu’à une matrice de nombres.</p>
+<p>Nous pouvons représenter le jeu de données via une heatmap, une carte de chaleur. L’idée est de transformer les valeurs numériques de la matrice par une couleur afin d’obtenir une image. L’oeil et le cerveau sont plus sensibles et réactifs à une image qu’à une matrice de nombres. Les couleurs par défaut sont difficilement interprétables ; on remplace par une palette de couleurs avec un gradient négatif (Bleu à Blanc) et un gradient positif (Blanc à Rouge).</p>
 <pre class="r"><code># heatmap, echelle de couleurs par défaut
 image(t(mat)[,rev(seq(nrow(mat)))], axes = F)</code></pre>
-<p><img src="/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-2-1.png" width="480" /></p>
 <pre class="r"><code># echelle de couleurs en double degrade negatif et positif
 image(t(mat)[,rev(seq(nrow(mat)))], axes = F, col = colorRampPalette(c(&quot;Blue2&quot;, &quot;White&quot;, &quot;Red2&quot;))(32))</code></pre>
-<p><img src="/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
-<p>Nous allons définir notre score pour déclarer un marqueur intéressant. Le test de Student et sa p-value est un choix classique. Nous voulons effectuer le test sur toutes les lignes de la matrice grâce à une boucle. Pour réaliser le coeur de la boucle, travaillons sur la première ligne pour définir le code R.</p>
+<p><img src="/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-2-2.png" width="480" /></p>
+</div>
+<div id="calcul-de-score" class="section level1">
+<h1>Calcul de score</h1>
+<p>Nous appliquons une méthode “Brute Force” qui consiste à interroger chaque variable (ligne) de la matrice et à rechercher si elle est corrélée avec le groupement des aptients en 2 groupes, c’est à dire si la vairable montre une différence de moyenne entre les deux groupes. Lorsque le score sera établi sur une ligne, on effectuera une boucle pour calculer le score sur l’ensemble des lignes.</p>
+<div id="score-sur-une-ligne" class="section level2">
+<h2>Score sur une ligne</h2>
+<p>Nous allons définir un score pour déclarer un marqueur intéressant. Le test de Student et sa p-value est un choix classique. Nous voulons effectuer le test sur toutes les lignes de la matrice grâce à une boucle. Pour réaliser le coeur de la boucle, travaillons sur la première ligne pour définir le code R.</p>
 <pre class="r"><code># Calcul du test de Student sur la 1ere ligne
 res = t.test(mat[1,1:10],mat[1,11:20])
 res  # affiche le contenu de la variable resultant du test de Student
@@ -532,6 +535,9 @@ res  # affiche le contenu de la variable resultant du test de Student
 <p>On extrait la partie du résultat en utilisant le symbole <code>$</code>.</p>
 <pre class="r"><code>res$p.value  # extraction de la p-value
 ## [1] 0.4664565</code></pre>
+</div>
+<div id="boucle-de-calcul" class="section level2">
+<h2>Boucle de calcul</h2>
 <p>Maintenant que le code est défini, nous l’insérons dans une boucle. Il existe plusieurs possibilités pour enregistrer le score (ie la p-value) dans un vecteur qui nous permettra ensuite de retenir les marqueurs les plus pertinents. Pour la boucle nous choisissons de pré-définir le vecteur de résultat.</p>
 <pre class="r"><code># Boucle pour extraire toutes les p-values
 
@@ -557,6 +563,9 @@ for(i in 1:nrow(mat)) {
 ## [1] 0.46645650 0.83996475 0.46990800 0.02188267 0.71253108 0.46391811
 tail(vec)
 ## [1] 0.33568922 0.34935958 0.03896348 0.88552095 0.86810947 0.84155214</code></pre>
+</div>
+<div id="analyse-du-score" class="section level2">
+<h2>Analyse du score</h2>
 <p>Nous avons donc une p-value pour chaque marqueur. Nous allons décrire ce vecteur, numériquement et graphiquement.</p>
 <pre class="r"><code># Description numerique et graphique des p-values
 summary(vec)
@@ -569,14 +578,20 @@ abline(h=50, lw=2, col=&quot;red&quot;)  # la hauteur moyenne des barres</code><
 <p>En fait, la hauteur moyenne est égale aux nombres de tests multiplié par la largeur de la barre. Les p-values suivent une loi uniforme entre 0 et 1 ou 0% et 100%. L’histogramme est présenté avec des intervalles d’une largeur de 5% (0.05 ou 1/20). Visuellement la moyenne est autour de 50. Cette valeur est logique, elle provient du nombre de tests et de la largeur des barres de l’histogramme : 1000 x 1/20 = 50. <strong>Point important</strong>, le nombre de tests déclarés statistiquement significatifs au seuil de 5% est de 50, 45 exactement dans le tirage aléatoire que nous avons effectué.</p>
 <p>Questions : que se passe-t-il si l’on définit un seuil de significativité à 1% ? Quel est la hauteur moyenne ? Combien de p-value sont dans une tranche de 1% ? Quel est le pourcentage de p-value dans une tranche de 1% ?</p>
 </div>
+</div>
 <div id="jeu-de-donnees-avec-differences" class="section level1">
 <h1>Jeu de données avec différences</h1>
+<div id="ajout-dune-difference" class="section level2">
+<h2>Ajout d’une différence</h2>
 <p>Nous allons introduire dans la matrice de données un changement pour le premier groupe. Pour les 100 premiers marqueurs, nous simulons une augmentation de valeur moyenne.</p>
 <pre class="r"><code>mat3 = mat  # recopie intégrale
 mat3[1:100, 1:10] = mat[1:100, 1:10] + 2.50  # modification du 1er groupe</code></pre>
 <p>La carte de couleurs de ce nouveau jeu de données montre bien la changement introduit.</p>
 <pre class="r"><code>image(t(mat3)[,rev(seq(nrow(mat)))], axes = F)</code></pre>
-<p><img src="/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-10-1.png" width="480" /></p>
+</div>
+<div id="recalcul-du-score" class="section level2">
+<h2>Recalcul du score</h2>
 <p>Refaisons le calcul du score.</p>
 <pre class="r"><code># Version avec pre-initilisation
 vec3 = rep(NA, 1000)
@@ -585,6 +600,9 @@ for(i in 1:nrow(mat3)) {
   #print(res2$p.value)
   vec3[i] = res2$p.value
 }</code></pre>
+</div>
+<div id="nouvelle-analyse" class="section level2">
+<h2>Nouvelle analyse</h2>
 <p>Refaisons la description graphique.</p>
 <pre class="r"><code>hist(vec3, nclass = 20) # 1 barre = 0.05
 # C&#39;est une loi uniforme
@@ -604,23 +622,14 @@ count
 ##         42         44         46         53         42         46 
 ## (0.9,0.95]   (0.95,1] 
 ##         48         45
-## 
-##   (0,0.05] (0.05,0.1] (0.1,0.15] (0.15,0.2] (0.2,0.25] (0.25,0.3] 
-##        139         46         42         42         47         37 
-## (0.3,0.35] (0.35,0.4] (0.4,0.45] (0.45,0.5] (0.5,0.55] (0.55,0.6] 
-##         43         45         58         61         35         39 
-## (0.6,0.65] (0.65,0.7] (0.7,0.75] (0.75,0.8] (0.8,0.85] (0.85,0.9] 
-##         42         44         46         53         42         46 
-## (0.9,0.95]   (0.95,1] 
-##         48         45
 mean(count[5:20])
-## [1] 45.6875
 ## [1] 45.6875</code></pre>
 <p>Si l’on souhaite diminuer ce taux, on se placera à un seuil de p-value plus faible. Prenons par exemple 1%. Ici l’estimation dans la partie droite donne 10 fausses découvertes en moyenne dans un intervalle de 1%. Le nombre de fausses découvertes est en moyenne de 10. Le premier intervalle de 0 à 1% totalise environ 110 découvertes. Donc le taux de fausses découvertes n’est plus que de 10 / 110, soit 1/10. C’est très nettement inférieur et fera perdre moins de temps à l’expérimentateur lors de la validation.</p>
 <pre class="r"><code>hist(vec3, nclass = 100) # 1 barre = 0.05
 # C&#39;est une loi uniforme
 abline(h=1000/100, lw=2, col=&quot;red&quot;)  # la hauteur moyenne des barres</code></pre>
 <p><img src="/post/2018-02-02-tests-multiples_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
 </div>
 
     </div>
@@ -666,7 +675,9 @@ abline(h=1000/100, lw=2, col=&quot;red&quot;)  # la hauteur moyenne des barres</
           
           <li><a href="/post/2018-02-02-experimentation/">Experimentation</a></li>
           
-          <li><a href="/post/2018-02-02-logiciels-statistiques/">Logiciels Statistiques</a></li>
+          <li><a href="/post/logiciels-statistiques/">Logiciels Statistiques</a></li>
+          
+          <li><a href="/post/2018-03-02-anova/">ANalysis Of VAriance</a></li>
           
         </ul>
       </div>
@@ -683,6 +694,10 @@ abline(h=1000/100, lw=2, col=&quot;red&quot;)  # la hauteur moyenne des barres</
 
 <div class="container">
   <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
   
 
   <p class="powered-by">

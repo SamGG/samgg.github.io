@@ -12,12 +12,22 @@
     
     
     <item>
+      <title>ANalysis Of VAriance</title>
+      <link>/post/2018-03-02-anova/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2018-03-02-anova/</guid>
+      <description>L’analyse de la variance consiste à trouver une différence de valeur moyenne entre différents groupes de mesures, en s’appuyant sur la mesure de variance. Si tous les groupes proviennent de la même population :
+leur moyenne doit être raisonnablement identique (compte tenu de la dispersion de la population),leur dispersion aussi,et si l’on mélange toutes les mesures dans un seul groupe, sa dispersion doit être identique à la dispersion de chaque groupe.</description>
+    </item>
+    
+    <item>
       <title>Intro to False Discovery Rate</title>
       <link>/post/2018-02-02-tests-multiples/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/post/2018-02-02-tests-multiples/</guid>
-      <description>IntroductionEn biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.</description>
+      <description>En biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.</description>
     </item>
     
   </channel>

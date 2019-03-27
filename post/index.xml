@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>ANalysis Of VAriance</title>
+      <link>/post/2018-03-02-anova/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2018-03-02-anova/</guid>
+      <description>L’analyse de la variance consiste à trouver une différence de valeur moyenne entre différents groupes de mesures, en s’appuyant sur la mesure de variance. Si tous les groupes proviennent de la même population :
+leur moyenne doit être raisonnablement identique (compte tenu de la dispersion de la population),leur dispersion aussi,et si l’on mélange toutes les mesures dans un seul groupe, sa dispersion doit être identique à la dispersion de chaque groupe.</description>
+    </item>
+    
+    <item>
       <title>Experimentation</title>
       <link>/post/2018-02-02-experimentation/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
@@ -27,15 +37,15 @@ En biologie comme dans la plupart des domaines scientifiques, on souhaite caract
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/post/2018-02-02-tests-multiples/</guid>
-      <description>IntroductionEn biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.</description>
+      <description>En biologie, l’expérimentateur a souvent un jeu de mesures moyen à grand (100 à 100k lignes, plusieurs colonnes). C’est une matrice de mesures obtenus sur des individus pour un ensemble de paramètres cliniques ou biologiques. Les lignes de cette matrice sont les variables observées : gènes, protéines, pourcentages de types cellulaires… Les colonnes sont les individus. Les individus forment des groupes ayant des caractéristiques différentes : réponse à un médicament, rechute… L’expérimentateur cherche parmi les marqueurs (ie les variables/lignes) ceux qui sont associés au regroupement ou plus généralement à la réponse des individus.</description>
     </item>
     
     <item>
       <title>Logiciels Statistiques</title>
-      <link>/post/2018-02-02-logiciels-statistiques/</link>
+      <link>/post/logiciels-statistiques/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2018-02-02-logiciels-statistiques/</guid>
+      <guid>/post/logiciels-statistiques/</guid>
       <description>Il existe de nombreux logiciels pour réaliser des calculs statistiques et pas un bon nombre sont gratuits. Cependant, assimiler l’interface graphique de chacun peut prendre du temps. Les logiciels que je retiens proposent plusieurs types d’analyse, ce qui rentabilise l’effort d’apprentissage, disposent d’une documentation et sont mis à jour régulièrement. Quelque soit votre choix, regardez vos données avant de les analyser aveuglement et ne bâtissez pas votre interprétation que sur la p-value.</description>
     </item>
     
